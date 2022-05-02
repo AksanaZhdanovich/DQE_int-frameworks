@@ -1,0 +1,1 @@
+INSERT INTO Production.UnitMeasure (UnitMeasureCode, Name) VALUES ('AAA',NULL);
