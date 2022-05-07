@@ -1,0 +1,40 @@
+{
+"NullFieldsCheck":[
+{
+	"SchemaName":"Person",
+	"TableName":"Address",
+	"NotNullField":"AddressLine1"
+}],
+"NumericValuesCheck":[
+{
+	"SchemaName":"Person",
+	"TableName":"Address",
+	"CheckField":"City"
+}
+],
+"TableExistCheck":[
+{
+	"SchemaName":"Production",
+	"TableName":"Document"
+}
+],
+"ColumnsNamesCheck":[
+{
+	"SchemaName":"Production",
+	"TableName":"Document"
+}
+],
+"UniqueValueCheck":[
+{
+	"SchemaName":"Production",
+	"TableName":"UnitMeasure",
+	"Field":"UnitMeasureCode"
+}],
+"InsertValueCheck":[
+{
+	"SchemaName":"Production",
+	"TableName":"UnitMeasure",
+	"Field1":"UnitMeasureCode",
+	"Field2":"Name"
+}]
+}

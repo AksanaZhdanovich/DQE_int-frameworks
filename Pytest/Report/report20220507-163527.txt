@@ -1,0 +1,90 @@
+Check Person.Address.Addressline1 does not have NULL values
+         №1, tbl = Person.Person.Address
+     Checking Addressline1 does not have NULL values
+    ...  | * Test Steps *
+    ...  | 1. Select count of rows in [Person].[Address]
+    ...  | that have NULL values for Addressline1 column
+    ...  | 2. Count number of rows returned
+    ...  |
+    ...  | * Expected result *
+    ...  | 1. No rows return
+
+
+RESULT:---------------------------
+check_null_values test is PASSED
+
+Check Person.Address.City does not have numeric values
+          №2, tbl = Person.Person.Address
+      Checking City column for numeric values
+    ...  | * Test Steps *
+    ...  | 1. Select count of rows in [Person].[Address]
+    ...  | that have numeric values in the column City
+    ...  |
+    ...  | * Expected results *
+    ...  | 1. Number of returned rows = 0
+
+
+
+RESULT:---------------------------
+check_numeric_values test is PASSED
+
+ Check Production.Document table exists
+    [Tags]  №3, tbl = Production.Production.Document
+    [Documentation]  Checking that table 'Production.Document' exists in the database
+    ...  | * Test Steps *
+    ...  | 1. Check that table exists
+    ...  |
+    ...  |
+    ...  |
+    ...  | * Expected results *
+    ...  | 1. Table exists
+
+
+RESULT:---------------------------
+check_table_exists test is PASSED
+
+Check column names from Production.Document
+    [Tags]  №4, tbl = Production.Production.Document
+    [Documentation]  Checking that table Production.Document has all columns
+    ...  | * Test Steps *
+    ...  | 1. Check that all columns are in the table Document
+    ...  |
+    ...  |
+    ...  |
+    ...  | Expected results:
+    ...  | 1. All columns are in the Document table
+
+
+RESULT:---------------------------
+check_all_columns test is PASSED
+
+Check Production.UnitMeasure.UnitMeasureCode has only unique values
+    [Tags]  №5, tbl = Production.UnitMeasure.UnitMeasureCode
+    [Documentation]  Checking that column 'UnitMeasureCode' in Production.UnitMeasure table (has only unique values)
+    ...  | * Test Steps *
+    ...  | 1. Get number of unique values in 'UnitMeasureCode' column
+    ...  | 2. Get total number of rows in Production.UnitMeasure table
+    ...  |
+    ...  | * Expected results *
+    ...  | 1. Total number of records in Production.UnitMeasure table is equal to number
+    ...  | of unique values in 'UnitMeasureCode' column
+
+
+RESULT:---------------------------
+check_unique_values test is PASSED
+
+Check Production.UnitMeasure.UnitMeasureCode has only unique values
+    [Tags]  №5, tbl = Production.UnitMeasure.UnitMeasureCode
+    [Documentation]  Checking that column 'UnitMeasureCode' in Production.UnitMeasure table (has only unique values)
+    ...  | * Test Steps *
+    ...  | 1. Get number of unique values in 'UnitMeasureCode' column
+    ...  | 2. Get total number of rows in Production.UnitMeasure table
+    ...  |
+    ...  | * Expected results *
+    ...  | 1. Total number of records in Production.UnitMeasure table is equal to number
+    ...  | of unique values in 'UnitMeasureCode' column
+
+
+RESULT:---------------------------
+check_insert_NULL test is PASSED
+
