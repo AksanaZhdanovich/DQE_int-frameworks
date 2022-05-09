@@ -130,8 +130,8 @@ def test_check_insert_NULL():
     json_file = open(jsonpath, 'r')
     json_data = json_file.read()
     obj = json.loads(json_data)
-    json_attr = obj['UniqueValueCheck']
-    add_info_in_the_report_file(47)
+    json_attr = obj['InsertValueCheck']
+    add_info_in_the_report_file(59)
     for i in range(len(json_attr)):
         query = "INSERT INTO {0}.{1} ({2},{3}) VALUES ('AAA',NULL);" \
             .format(json_attr[i].get("SchemaName"),

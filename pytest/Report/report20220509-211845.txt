@@ -73,16 +73,16 @@ Check Production.UnitMeasure.UnitMeasureCode has only unique values
 RESULT:---------------------------
 check_unique_values test is PASSED
 
-Check Production.UnitMeasure.UnitMeasureCode has only unique values
-    [Tags]  №5, tbl = Production.UnitMeasure.UnitMeasureCode
-    [Documentation]  Checking that column 'UnitMeasureCode' in Production.UnitMeasure table (has only unique values)
+Check Null value cannot be added in the Production.UnitMeasure.Name column
+    [Tags]  №6, tbl = Production.UnitMeasure.Name
+    [Documentation]  Checking that Null value for Name column cannot be inserted
     ...  | * Test Steps *
-    ...  | 1. Get number of unique values in 'UnitMeasureCode' column
-    ...  | 2. Get total number of rows in Production.UnitMeasure table
+    ...  | 1. Insert Name=NUll in the UnitMeasure table
+    ...  |
+    ...  |
     ...  |
     ...  | * Expected results *
-    ...  | 1. Total number of records in Production.UnitMeasure table is equal to number
-    ...  | of unique values in 'UnitMeasureCode' column
+    ...  | 1. SQL script is executed with an error
 
 
 RESULT:---------------------------
