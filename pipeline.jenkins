@@ -14,7 +14,7 @@ pipeline {
 		            echo 'Execute tests from pytest ...'
 	                sh 'chmod 755 -R pytest'
 					sh 'cd pytest'
-		            sh 'pytest pytest/test_cases.py'
+		            sh 'pytest test_cases.py'
                 }
             }
             stage('Deploy') {
