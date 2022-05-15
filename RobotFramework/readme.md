@@ -10,7 +10,7 @@ pip install pymssql
 <br>
 
 <h3>Project structure</h3><br>
-<b>Automation</b><br>
+<b>Pytest</b><br>
 &nbsp;&nbsp;&nbsp;&nbsp;     |-- test.robot<br>
 <b>Resources</b><br>
 &nbsp;&nbsp;&nbsp;&nbsp;     |-- Databaseconnection.robot<br>
