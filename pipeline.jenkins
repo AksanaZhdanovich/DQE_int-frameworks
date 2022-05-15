@@ -12,6 +12,7 @@ pipeline {
 	        stage('Tests') {
 		        steps {
 		            echo 'Execute tests from pytest ...'
+					sh 'cd pytest'
 		            sh 'pytest pytest/test_cases.py'
                 }
             }
