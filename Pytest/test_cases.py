@@ -7,7 +7,7 @@ connect = pymssql.connect(host='host.docker.internal',
                           database='AdventureWorks2012',
                           user='testuser',
                           password='test')
-jsonpath = 'Database/DB.json'
+jsonpath = 'pytest/Database/DB.json'
 reportFile = open('pytest/report/report' + datetime.now().strftime("%Y%m%d-%H%M%S") + '.txt', 'w+')
 cursor = connect.cursor()
 with open('pytest/cases.txt') as info_file:
