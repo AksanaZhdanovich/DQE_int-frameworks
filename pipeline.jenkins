@@ -13,8 +13,6 @@ pipeline {
 		        steps {
 		            echo 'Execute tests from pytest ...'
 					dir ("${WORKSPACE}/pytest") {
-                    sh "chmod 755 -R pytest"
-                    echo "${PWD}"
 					sh 'pytest test_cases.py'}
                 }
             }
