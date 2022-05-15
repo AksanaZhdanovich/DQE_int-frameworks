@@ -2,7 +2,7 @@ import pymssql
 from datetime import datetime
 import json
 
-connect = pymssql.connect(host='localhost',
+connect = pymssql.connect(host='192.168.0.87',
                           database='AdventureWorks2012',
                           user='testuser',
                           password='test')
