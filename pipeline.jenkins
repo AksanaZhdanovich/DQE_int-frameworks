@@ -21,7 +21,8 @@ pipeline {
                     echo 'Merge feature branch with master ...'
                     sshagent (['ssh-agent']) {
 		        sh 'git stash'
-				sh 'git remote add origin1 https://github.com/AksanaZhdanovich/DQE_int-frameworks.git'
+				sh 'git remote remove origin1'
+				sh 'git remote add origin1 https://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@github.com//AksanaZhdanovich/DQE_int-frameworks.git'
 	            sh 'git remote update'
                 sh 'git checkout main'
                 sh 'git merge origin1/feature'
