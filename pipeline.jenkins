@@ -5,6 +5,7 @@ pipeline {
                 steps {
                     echo 'Start pipeline ...'
 					sh 'pip install -r requirements.txt'
+                    sh 'pip3 install pytest'
                     sh 'export PATH="/var/jenkins_home/.local/bin:$PATH"'
                 }
             }
