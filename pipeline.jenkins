@@ -19,7 +19,8 @@ pipeline {
             stage('Deploy') {
                 steps {
                     echo 'Merge feature branch with master ...'
-                     sshagent(credentials: ["5e5cc46e-7f15-44ab-a95c-101fbcb28784"]) {
+                     sshagent (['ssh-agent']) {
+				sh 'git remote set-url origin git@github.com:AksanaZhdanovich/DQE_int-frameworks.git'
 				sh 'git stash'
 				sh 'git remote update'
 				sh 'git checkout main'
