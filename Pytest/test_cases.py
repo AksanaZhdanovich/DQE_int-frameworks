@@ -1,16 +1,16 @@
 import pymssql
 from datetime import datetime
 import json
-import os
+
 
 connect = pymssql.connect(host='host.docker.internal',
                           database='AdventureWorks2012',
                           user='testuser',
                           password='test')
-jsonpath = 'pytest/Database/DB.json'
-reportFile = open('pytest/report/report' + datetime.now().strftime("%Y%m%d-%H%M%S") + '.txt', 'w+')
+jsonpath = 'Database/DB.json'
+reportFile = open('report/report' + datetime.now().strftime("%Y%m%d-%H%M%S") + '.txt', 'w+')
 cursor = connect.cursor()
-with open('pytest/cases.txt') as info_file:
+with open('cases.txt') as info_file:
     lines_in_file = info_file.readlines()
 
 
