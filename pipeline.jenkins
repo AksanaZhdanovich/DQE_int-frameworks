@@ -12,9 +12,9 @@ pipeline {
 	        stage('Tests') {
 		        steps {
 		            echo 'Execute tests from pytest ...'
-					echo ${PWD}
+					echo "${PWD}"
 					sh 'chmod 755 -R pytest'
-					echo ${PWD}
+					echo "${PWD}"
 					cd pytest
 					sh 'pytest test_cases.py'
                 }
