@@ -21,7 +21,7 @@ pipeline {
                     echo 'Merge feature branch with master ...'
 	script {
 catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-													withCredentials([usernamePassword(credentialsId: 'example-secure', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
+													withCredentials([usernamePassword(credentialsId: '004e360f-7fe5-4542-8780-eb7ba5ec89af', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
 		   def encodedPassword = URLEncoder.encode("$GIT_PASSWORD",'UTF-8')
     	   sh 'git config user.email Aksana_Zhdanovich@epam.com'
     	   sh 'git config user.name AksanaZhdanovich'
