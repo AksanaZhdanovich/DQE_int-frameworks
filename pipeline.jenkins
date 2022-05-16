@@ -25,6 +25,7 @@ pipeline {
 				sh 'git remote update'
 				sh 'git checkout main'
 				sh 'git merge origin/feature'
+                sh 'git remote set-url origin https://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@github.com:AksanaZhdanovich/DQE_int-frameworks.git'
 				sh 'git push https://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@github.com:AksanaZhdanovich/DQE_int-frameworks.git'
                 }
             }
