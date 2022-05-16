@@ -17,10 +17,10 @@ pipeline {
                 }
             }
 			stage('Tests_robot') {
-			steps {
-			echo 'Execute tests from robotframework ...'
-			dir ("${WORKSPACE}/RobotFramework/Automation") {
-			sh 'robot test.robot'}
+				steps {
+					echo 'Execute tests from robotframework ...'
+					dir ("${WORKSPACE}/RobotFramework/Automation") {
+					sh 'robot test.robot'}
 		}
 		}
             stage('Deploy') {
