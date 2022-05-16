@@ -25,7 +25,7 @@ catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
 		   def encodedPassword = URLEncoder.encode("$GIT_PASSWORD",'UTF-8')
     	   sh 'git config user.email Aksana_Zhdanovich@epam.com'
     	   sh 'git config user.name AksanaZhdanovich'
-		  sh 'git push https://${GIT_USERNAME}:${encodedPassword}@github.com/AksanaZhdanovich/DQE_int-frameworks.git'
+		   sh 'git push https://${GIT_USERNAME}:${encodedPassword}@github.com/AksanaZhdanovich/DQE_int-frameworks.git main'
 }
 }
 }
