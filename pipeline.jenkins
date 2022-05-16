@@ -20,21 +20,14 @@ pipeline {
                 steps {
                     echo 'Merge feature branch with master ...'
                      sshagent (['ssh-agent']) {
-				sh 'git config credential.helper store'
 				sh 'git stash'
 				sh 'git remote update'
 				sh 'git checkout main'
 				sh 'git merge origin/feature'
-	            sh 'git config url.https://github.com/.insteadOf git@github.com/'
-                sh('''
-                  git config user.name 'AksanaZhdanovich'
-                  git config user.email 'aksanazhdanovich@epam.com'
-                ''')
-                sh('''
-	               #!/usr/bin/env bash
-	               set +x
-	               git remote set-url origin git@github.com:AksanaZhdanovich/DQE_int-frameworks.git
-	               git push origin ''')
+                sh 'git config user.name 'AksanaZhdanovich'
+                sh 'git config user.email 'aksanazhdanovich@epam.com
+	            sh 'git remote set-url origin git@github.com:AksanaZhdanovich/DQE_int-frameworks.git
+	            sh 'git push origin'
                 }
             }
          }
