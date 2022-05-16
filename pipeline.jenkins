@@ -20,8 +20,8 @@ pipeline {
                 steps {
                     echo 'Merge feature branch with master ...'
                      sshagent (['ssh-agent']) {
-				sh 'find "/var/jenkins_home/workspace/DQE_Pipeline@tmp" -name "*.key" | xargs cat'
-				sh 'git remote set-url origin git@github.com:AksanaZhdanovich/DQE_int-frameworks.git'
+				sh 'git config --global user.name "AksanaZhdanovich"'
+				sh 'git config --global user.email  "Aksana_Zhdanovich@epam.com"'
 				sh 'git stash'
 				sh 'git remote update'
 				sh 'git checkout main'
