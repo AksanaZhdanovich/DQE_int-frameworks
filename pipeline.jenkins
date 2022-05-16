@@ -19,17 +19,14 @@ pipeline {
 		    stage('Deploy') {
                 steps {
                     echo 'Merge feature branch with master ...'
-	script {
-catchError(buildResult: 'SUCCESS', stageResult: 'FAILURE') {
-													withCredentials([usernamePassword(credentialsId: 'd4e75a84-f5ff-4c7f-bc9c-57f7d3ff4f77', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
-		   def encodedPassword = URLEncoder.encode("$GIT_PASSWORD",'UTF-8')
-    	   sh 'git config user.email Aksana_Zhdanovich@epam.com'
-    	   sh 'git config user.name AksanaZhdanovich'
-		   sh 'git push https://${GIT_USERNAME}:${encodedPassword}@github.com/AksanaZhdanovich/DQE_int-frameworks.git main'
-}
-}
-}
+                     sshagent (['ssh-agent']) {
+				sh 'git config credential.helper store'
+				sh 'git stash'
+				sh 'git remote update'
+				sh 'git checkout main'
+				sh 'git merge origin/feature'
 
+                }
             }
         }
      }
