@@ -33,7 +33,7 @@ pipeline {
                 sh('''
 	               #!/usr/bin/env bash
 	               set +x
-	               export GIT_SSH_COMMAND="ssh -oStrictHostKeyChecking=no"
+	               git remote set-url origin git@github.com:AksanaZhdanovich/DQE_int-frameworks.git
 	               git push --set-upstream origin HEAD:main ''')
                 }
             }
