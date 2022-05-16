@@ -29,6 +29,7 @@ report.html - Test report, Test Details <br>
 output.xml - output<br>
 
 
+
 <h4>Pay attention - password to connect to DB is not saved in the Databaseconnection.robot file.</h4>
 <h4>To run test.robot  user should create they own user and password to connect to AdventureWorks2012 DB.</h4>
 
