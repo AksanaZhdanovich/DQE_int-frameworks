@@ -2,6 +2,7 @@ import pymssql
 from datetime import datetime
 import json
 
+
 connect = pymssql.connect(host='host.docker.internal',
                           database='AdventureWorks2012',
                           user='testuser',
