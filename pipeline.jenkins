@@ -25,7 +25,7 @@ pipeline {
 				sh 'git checkout main'
 				sh 'git merge origin/feature'
                 sh 'git config user.name "AksanaZhdanovich"'
-                sh 'git config user.email "aksanazhdanovich@epam.com"'
+                sh 'git config user.email "aksana_zhdanovich@epam.com"'
 	            sh 'git remote set-url origin git@github.com:AksanaZhdanovich/DQE_int-frameworks.git'
 	            sh 'git push origin'
                 }
