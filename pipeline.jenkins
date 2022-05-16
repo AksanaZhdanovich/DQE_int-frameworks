@@ -16,14 +16,7 @@ pipeline {
 					sh 'pytest test_cases.py'}
                 }
             }
-			stage('Tests_robot') {
-				steps {
-					echo 'Execute tests from robotframework ...'
-					dir ("${WORKSPACE}/RobotFramework/Automation") {
-					sh 'robot test.robot'}
-		}
-		}
-            stage('Deploy') {
+		    stage('Deploy') {
                 steps {
                     echo 'Merge feature branch with master ...'
                      sshagent (['ssh-agent']) {
