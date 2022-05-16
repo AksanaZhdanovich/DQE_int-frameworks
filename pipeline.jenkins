@@ -9,13 +9,20 @@ pipeline {
                     sh 'export PATH="/var/jenkins_home/.local/bin:$PATH"'
                 }
             }
-	        stage('Tests') {
+	        stage('Tests_pytest') {
 		        steps {
 		            echo 'Execute tests from pytest ...'
 					dir ("${WORKSPACE}/pytest") {
 					sh 'pytest test_cases.py'}
                 }
             }
+			stage('Tests_robot') {
+			steps {
+			echo 'Execute tests from robotframework ...'
+			dir ("${WORKSPACE}/RobotFramework/test.robot") {
+			sh 'pytest test_cases.py'}
+		}
+		}
             stage('Deploy') {
                 steps {
                     echo 'Merge feature branch with master ...'

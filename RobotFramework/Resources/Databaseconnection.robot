@@ -9,7 +9,7 @@ Library  DatabaseLibrary
 *** Variables ***
 ${dbName}  AdventureWorks2012
 ${dbUser}  testuser
-${dbPass}
+${dbPass}  test
 ${dbHost}  localhost
 ${dbPort}  1433
 

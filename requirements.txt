@@ -1,2 +1,5 @@
 pytest >= 6.2.5
 pymssql >= 2.2.2
+robotframework >= 4.1.2
+robotframework-databaselibrary >= 1.2.4
+pymssql >= 2.2.2
