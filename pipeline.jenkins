@@ -34,7 +34,7 @@ pipeline {
 	               #!/usr/bin/env bash
 	               set +x
 	               git remote set-url origin git@github.com:AksanaZhdanovich/DQE_int-frameworks.git
-	               git push --set-upstream origin HEAD:main ''')
+	               git push origin ''')
                 }
             }
          }
