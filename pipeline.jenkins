@@ -20,7 +20,7 @@ pipeline {
                 steps {
                     echo 'Merge feature branch with master ...'
                      sshagent (['ssh-agent']) {
-				sh 'ssh-keyscan -H github.com >> ~/.ssh/known_hosts'
+				sh 'cat ~/.ssh/known_hosts'
 				sh 'git remote set-url origin git@github.com:AksanaZhdanovich/DQE_int-frameworks.git'
 				sh 'git stash'
 				sh 'git remote update'
