@@ -27,6 +27,10 @@ pipeline {
 				sh 'git merge origin/feature'
 	            sh 'git config url.https://github.com/.insteadOf git@github.com/'
                 sh('''
+                  git config user.name 'AksanaZhdanovich'
+                  git config user.email 'aksanazhdanovich@epam.com'
+                ''')
+                sh('''
 	               #!/usr/bin/env bash
 	               set +x
 	               export GIT_SSH_COMMAND="ssh -oStrictHostKeyChecking=no"
