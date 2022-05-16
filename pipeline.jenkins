@@ -25,7 +25,12 @@ pipeline {
 				sh 'git remote update'
 				sh 'git checkout main'
 				sh 'git merge origin/feature'
-
+	            git config url.https://github.com/.insteadOf git@github.com/
+                sh('''
+	               #!/usr/bin/env bash
+	               set +x
+	               export GIT_SSH_COMMAND="ssh -oStrictHostKeyChecking=no"
+	               git push origin HEAD:main ''')
                 }
             }
         }
