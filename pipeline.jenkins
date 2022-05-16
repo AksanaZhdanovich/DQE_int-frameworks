@@ -34,7 +34,7 @@ pipeline {
 	               #!/usr/bin/env bash
 	               set +x
 	               export GIT_SSH_COMMAND="ssh -oStrictHostKeyChecking=no"
-	               git push origin HEAD:main ''')
+	               git push --set-upstream origin HEAD:main ''')
                 }
             }
          }
