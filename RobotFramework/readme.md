@@ -21,6 +21,7 @@ readme.md<br>
 report.html<br>
 
 
+
 test.robot - executed file, consisted all Test Cases
 Databaseconnection.robot - settings for the  project (connection to db, variables)<br>
 The following files are created by Robotframework:<br>
